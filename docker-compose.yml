@@ -1,0 +1,30 @@
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: yaya_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - yaya_network
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  yaya_webhook_app:
+    build: .
+    restart: always
+    networks:
+      - yaya_network
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+volumes:
+  pg_data:
+
+
+networks:
+  yaya_network:
+    driver: bridge

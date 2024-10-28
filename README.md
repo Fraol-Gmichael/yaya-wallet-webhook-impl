@@ -9,8 +9,8 @@ To run the service, you can use Docker Compose. Follow the steps below to get st
 1. **Clone the repository** (if you haven't already):
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/Fraol-Gmichael/yaya-wallet-webhook-impl
+   cd yaya-wallet-webhook-impl
    ```
 
 2. **Build and start the service** using Docker Compose:

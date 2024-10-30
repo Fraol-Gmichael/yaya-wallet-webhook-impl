@@ -68,7 +68,3 @@ curl --request POST \
 ```
 
 In this case, the service should respond with an error indicating that the signature is invalid.
-
-## License
-
-This project is licensed under the MIT License.
